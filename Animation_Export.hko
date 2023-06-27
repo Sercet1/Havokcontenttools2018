@@ -1,0 +1,856 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hktagfile version="3">
+  <type id="type1">
+    <name value="hctFilterConfigurationSet"/>
+    <format value="7"/> <!-- record -->
+    <flags value="512"/>
+    <fields count="2">
+      <field name="configurations" typeid="type2" flags="32" /> <!-- hkArray< hctFilterConfigurationSet::Configuration, hkContainerHeapAllocator > -->
+      <field name="currentIndex" typeid="type3" flags="32" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type2">
+    <name value="hkArray"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type4" /> <!-- hctFilterConfigurationSet::Configuration -->
+    <parameters count="2">
+      <typeparam id="type4" /> <!-- hctFilterConfigurationSet::Configuration -->
+      <typeparam id="type5" /> <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type6" flags="34" /> <!-- T*< hctFilterConfigurationSet::Configuration > -->
+      <field name="m_size" typeid="type3" flags="34" /> <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type3" flags="34" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type3">
+    <name value="int"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type4">
+    <name value="hctFilterConfigurationSet::Configuration"/>
+    <format value="7"/> <!-- record -->
+    <fields count="2">
+      <field name="configName" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="filterStages" typeid="type8" flags="32" /> <!-- hkArray< hctFilterConfigurationSet::FilterStage, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type5">
+    <name value="hkContainerHeapAllocator"/>
+    <format value="7"/> <!-- record -->
+    <flags value="16"/>
+    <fields count="0">
+    </fields>
+  </type>
+  <type id="type6">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type4" /> <!-- hctFilterConfigurationSet::Configuration -->
+    <parameters count="1">
+      <typeparam id="type4" /> <!-- hctFilterConfigurationSet::Configuration -->
+    </parameters>
+    <flags value="64"/>
+  </type>
+  <type id="type7">
+    <name value="hkStringPtr"/>
+    <format value="131"/> <!-- string (ptr) -->
+    <fields count="1">
+      <field name="stringAndFlag" typeid="type10" flags="36" /> <!-- char* -->
+    </fields>
+  </type>
+  <type id="type8">
+    <name value="hkArray"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type11" /> <!-- hctFilterConfigurationSet::FilterStage -->
+    <parameters count="2">
+      <typeparam id="type11" /> <!-- hctFilterConfigurationSet::FilterStage -->
+      <typeparam id="type5" /> <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type12" flags="34" /> <!-- T*< hctFilterConfigurationSet::FilterStage > -->
+      <field name="m_size" typeid="type3" flags="34" /> <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type3" flags="34" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type9">
+    <name value="char"/>
+    <format value="8196"/> <!-- uint8 (LE) -->
+  </type>
+  <type id="type10">
+    <name value="char*"/>
+    <format value="3"/> <!-- string (ptr) -->
+  </type>
+  <type id="type11">
+    <name value="hctFilterConfigurationSet::FilterStage"/>
+    <format value="7"/> <!-- record -->
+    <fields count="3">
+      <field name="filterId" typeid="type13" flags="32" /> <!-- unsigned int -->
+      <field name="optionDataVersion" typeid="type13" flags="32" /> <!-- unsigned int -->
+      <field name="options" typeid="type14" flags="32" /> <!-- hkReflect::Any -->
+    </fields>
+  </type>
+  <type id="type12">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type11" /> <!-- hctFilterConfigurationSet::FilterStage -->
+    <parameters count="1">
+      <typeparam id="type11" /> <!-- hctFilterConfigurationSet::FilterStage -->
+    </parameters>
+    <flags value="64"/>
+  </type>
+  <type id="type13">
+    <name value="unsigned int"/>
+    <format value="32772"/> <!-- uint32 (LE) -->
+  </type>
+  <type id="type14">
+    <name value="hkReflect::Any"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type0" /> <!-- null -->
+    <fields count="3">
+      <field name="type" typeid="type15" flags="36" /> <!-- hkReflect::QualifiedType< hkReflect::Type > -->
+      <field name="status" typeid="type16" flags="36" /> <!-- unsigned char -->
+      <field name="buf" typeid="type17" flags="36" /> <!-- T[N]< hkUintReal, 4 > -->
+    </fields>
+  </type>
+  <type id="type15">
+    <name value="hkReflect::QualifiedType"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type18" /> <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type18" /> <!-- hkReflect::Type -->
+    </parameters>
+    <fields count="1">
+      <field name="type" typeid="type19" flags="36" /> <!-- T*< hkReflect::Type > -->
+    </fields>
+  </type>
+  <type id="type16">
+    <name value="unsigned char"/>
+    <format value="8196"/> <!-- uint8 (LE) -->
+  </type>
+  <type id="type17">
+    <name value="T[N]"/>
+    <format value="1064"/> <!-- array(4) -->
+    <subtype id="type20" /> <!-- hkUintReal -->
+    <parameters count="2">
+      <typeparam id="type20" /> <!-- hkUintReal -->
+      <valueparam value="4"/>
+    </parameters>
+  </type>
+  <type id="type18">
+    <name value="hkReflect::Type"/>
+    <format value="1"/> <!-- incomplete -->
+  </type>
+  <type id="type19">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type18" /> <!-- hkReflect::Type -->
+    <parameters count="1">
+      <typeparam id="type18" /> <!-- hkReflect::Type -->
+    </parameters>
+    <flags value="0"/>
+  </type>
+  <type id="type20">
+    <name value="hkUintReal"/>
+    <parent id="type13" /> <!-- unsigned int -->
+  </type>
+  <type id="type21">
+    <name value="hctAlignSceneToNodeOptions"/>
+    <format value="7"/> <!-- record -->
+    <fields count="10">
+      <field name="invert" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformPositionX" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformPositionY" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformPositionZ" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformRotation" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformScale" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="transformSkew" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="keyframe" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="nodeName" typeid="type24" flags="36" /> <!-- hkArray< hkInt8, hkContainerHeapAllocator > -->
+      <field name="nodeNameStr" typeid="type7" flags="36" /> <!-- hkStringPtr -->
+    </fields>
+  </type>
+  <type id="type22">
+    <name value="hkBool"/>
+    <format value="8194"/> <!-- bool8 (unsigned, LE) -->
+    <fields count="1">
+      <field name="bool" typeid="type9" flags="36" /> <!-- char -->
+    </fields>
+  </type>
+  <type id="type23">
+    <name value="hkInt32"/>
+    <parent id="type3" /> <!-- int -->
+  </type>
+  <type id="type24">
+    <name value="hkArray"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type25" /> <!-- hkInt8 -->
+    <parameters count="2">
+      <typeparam id="type25" /> <!-- hkInt8 -->
+      <typeparam id="type5" /> <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type26" flags="34" /> <!-- T*< hkInt8 > -->
+      <field name="m_size" typeid="type3" flags="34" /> <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type3" flags="34" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type25">
+    <name value="hkInt8"/>
+    <parent id="type27" /> <!-- signed char -->
+  </type>
+  <type id="type26">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type25" /> <!-- hkInt8 -->
+    <parameters count="1">
+      <typeparam id="type25" /> <!-- hkInt8 -->
+    </parameters>
+    <flags value="64"/>
+  </type>
+  <type id="type27">
+    <name value="signed char"/>
+    <format value="8708"/> <!-- int8 (LE) -->
+  </type>
+  <type id="type28">
+    <name value="hctCreateSkeletonOptions"/>
+    <format value="7"/> <!-- record -->
+    <fields count="14">
+      <field name="moveToOrigin" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="automatic" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="rigNodes" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="rigFile" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="selected" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="skinBindings" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="floatSlots" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="useOrderInFile" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="substringMatch" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="skeletonName" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="partitions" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="partitionStartBoneNames" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="partitionEndBoneNames" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="useRootBoneNameAsSkeletonName" typeid="type22" flags="32" /> <!-- hkBool -->
+    </fields>
+  </type>
+  <type id="type29">
+    <name value="hctCreateAnimationsOptions"/>
+    <format value="7"/> <!-- record -->
+    <version value="1"/>
+    <fields count="15">
+      <field name="playbackReferenceFrame" typeid="type30" flags="32" /> <!-- hctCreateAnimationsOptions::PlaybackReferenceFrame -->
+      <field name="moveToOriginX" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="moveToOriginY" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="moveToOriginZ" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="animationStartNodes" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="subAnimation" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="subAnimationStartFrame" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="subAnimationEndFrame" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="selected" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="manual" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="rigFilename" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="partialAnimationNodes" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="nameAnimationTracks" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="previewColor" typeid="type31" flags="32" /> <!-- hkUint32 -->
+      <field name="floatTracks" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+    </fields>
+  </type>
+  <type id="type30">
+    <name value="hctCreateAnimationsOptions::PlaybackReferenceFrame"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type31">
+    <name value="hkUint32"/>
+    <parent id="type13" /> <!-- unsigned int -->
+  </type>
+  <type id="type32">
+    <name value="hctExtractMotionOptions"/>
+    <format value="7"/> <!-- record -->
+    <fields count="16">
+      <field name="allowUpDown" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="allowFrontBack" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="allowRightLeft" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="allowTurning" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="ignoreUpDown" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="ignoreFrontBack" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="ignoreRightLeft" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="customNumSamples" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="numSamples" typeid="type33" flags="32" /> <!-- hkInt16 -->
+      <field name="upAxis" typeid="type34" flags="32" /> <!-- hkEnum< hctExtractMotionOptions::Axis, hkInt8 > -->
+      <field name="forwardAxis" typeid="type34" flags="32" /> <!-- hkEnum< hctExtractMotionOptions::Axis, hkInt8 > -->
+      <field name="alternateReferenceFrame" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="useFrameRange" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="startFrame" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="endFrame" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="type" typeid="type35" flags="32" /> <!-- hkEnum< hctExtractMotionOptions::ExtractedMotionType, hkInt8 > -->
+    </fields>
+  </type>
+  <type id="type33">
+    <name value="hkInt16"/>
+    <parent id="type36" /> <!-- short -->
+  </type>
+  <type id="type34">
+    <name value="hkEnum"/>
+    <format value="8708"/> <!-- int8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type37" /> <!-- hctExtractMotionOptions::Axis -->
+      <typeparam id="type25" /> <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type25" flags="36" /> <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type35">
+    <name value="hkEnum"/>
+    <format value="8708"/> <!-- int8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type38" /> <!-- hctExtractMotionOptions::ExtractedMotionType -->
+      <typeparam id="type25" /> <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type25" flags="36" /> <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type36">
+    <name value="short"/>
+    <format value="16900"/> <!-- int16 (LE) -->
+  </type>
+  <type id="type37">
+    <name value="hctExtractMotionOptions::Axis"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type38">
+    <name value="hctExtractMotionOptions::ExtractedMotionType"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type39">
+    <name value="hctSplineCompressionOptionsSerializable"/>
+    <format value="7"/> <!-- record -->
+    <fields count="8">
+      <field name="trackParams" typeid="type40" flags="32" /> <!-- hkArray< hkaSplineCompressedAnimation::TrackCompressionParams, hkContainerHeapAllocator > -->
+      <field name="animationParams" typeid="type41" flags="32" /> <!-- hkaSplineCompressedAnimation::AnimationCompressionParams -->
+      <field name="useExpertControls" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="selectedSet" typeid="type23" flags="32" /> <!-- hkInt32 -->
+      <field name="setNames" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="boneSets" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="allBoneNames" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="boneDepth" typeid="type42" flags="32" /> <!-- hkArray< hkUint8, hkContainerHeapAllocator > -->
+    </fields>
+  </type>
+  <type id="type40">
+    <name value="hkArray"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type43" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+    <parameters count="2">
+      <typeparam id="type43" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+      <typeparam id="type5" /> <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type44" flags="34" /> <!-- T*< hkaSplineCompressedAnimation::TrackCompressionParams > -->
+      <field name="m_size" typeid="type3" flags="34" /> <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type3" flags="34" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type41">
+    <name value="hkaSplineCompressedAnimation::AnimationCompressionParams"/>
+    <format value="7"/> <!-- record -->
+    <fields count="2">
+      <field name="maxFramesPerBlock" typeid="type45" flags="32" /> <!-- hkUint16 -->
+      <field name="enableSampleSingleTracks" typeid="type22" flags="32" /> <!-- hkBool -->
+    </fields>
+  </type>
+  <type id="type42">
+    <name value="hkArray"/>
+    <format value="8"/> <!-- array -->
+    <subtype id="type46" /> <!-- hkUint8 -->
+    <parameters count="2">
+      <typeparam id="type46" /> <!-- hkUint8 -->
+      <typeparam id="type5" /> <!-- hkContainerHeapAllocator -->
+    </parameters>
+    <fields count="3">
+      <field name="m_data" typeid="type47" flags="34" /> <!-- T*< hkUint8 > -->
+      <field name="m_size" typeid="type3" flags="34" /> <!-- int -->
+      <field name="m_capacityAndFlags" typeid="type3" flags="34" /> <!-- int -->
+    </fields>
+  </type>
+  <type id="type43">
+    <name value="hkaSplineCompressedAnimation::TrackCompressionParams"/>
+    <format value="7"/> <!-- record -->
+    <fields count="12">
+      <field name="rotationTolerance" typeid="type48" flags="32" /> <!-- hkReal -->
+      <field name="translationTolerance" typeid="type48" flags="32" /> <!-- hkReal -->
+      <field name="scaleTolerance" typeid="type48" flags="32" /> <!-- hkReal -->
+      <field name="floatingTolerance" typeid="type48" flags="32" /> <!-- hkReal -->
+      <field name="rotationDegree" typeid="type45" flags="32" /> <!-- hkUint16 -->
+      <field name="translationDegree" typeid="type45" flags="32" /> <!-- hkUint16 -->
+      <field name="scaleDegree" typeid="type45" flags="32" /> <!-- hkUint16 -->
+      <field name="floatingDegree" typeid="type45" flags="32" /> <!-- hkUint16 -->
+      <field name="rotationQuantizationType" typeid="type49" flags="32" /> <!-- hkEnum< hkaSplineCompressedAnimation::TrackCompressionParams::RotationQuantization, hkUint8 > -->
+      <field name="translationQuantizationType" typeid="type50" flags="32" /> <!-- hkEnum< hkaSplineCompressedAnimation::TrackCompressionParams::ScalarQuantization, hkUint8 > -->
+      <field name="scaleQuantizationType" typeid="type50" flags="32" /> <!-- hkEnum< hkaSplineCompressedAnimation::TrackCompressionParams::ScalarQuantization, hkUint8 > -->
+      <field name="floatQuantizationType" typeid="type50" flags="32" /> <!-- hkEnum< hkaSplineCompressedAnimation::TrackCompressionParams::ScalarQuantization, hkUint8 > -->
+    </fields>
+  </type>
+  <type id="type44">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type43" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+    <parameters count="1">
+      <typeparam id="type43" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+    </parameters>
+    <flags value="64"/>
+  </type>
+  <type id="type45">
+    <name value="hkUint16"/>
+    <parent id="type51" /> <!-- unsigned short -->
+  </type>
+  <type id="type46">
+    <name value="hkUint8"/>
+    <parent id="type16" /> <!-- unsigned char -->
+  </type>
+  <type id="type47">
+    <name value="T*"/>
+    <format value="6"/> <!-- pointer -->
+    <subtype id="type46" /> <!-- hkUint8 -->
+    <parameters count="1">
+      <typeparam id="type46" /> <!-- hkUint8 -->
+    </parameters>
+    <flags value="64"/>
+  </type>
+  <type id="type48">
+    <name value="hkReal"/>
+    <parent id="type52" /> <!-- float -->
+  </type>
+  <type id="type49">
+    <name value="hkEnum"/>
+    <format value="8196"/> <!-- uint8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type53" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams::RotationQuantization -->
+      <typeparam id="type46" /> <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type46" flags="36" /> <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type50">
+    <name value="hkEnum"/>
+    <format value="8196"/> <!-- uint8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type54" /> <!-- hkaSplineCompressedAnimation::TrackCompressionParams::ScalarQuantization -->
+      <typeparam id="type46" /> <!-- hkUint8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type46" flags="36" /> <!-- hkUint8 -->
+    </fields>
+  </type>
+  <type id="type51">
+    <name value="unsigned short"/>
+    <format value="16388"/> <!-- uint16 (LE) -->
+  </type>
+  <type id="type52">
+    <name value="float"/>
+    <format value="1525253"/> <!-- float -->
+  </type>
+  <type id="type53">
+    <name value="hkaSplineCompressedAnimation::TrackCompressionParams::RotationQuantization"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type54">
+    <name value="hkaSplineCompressedAnimation::TrackCompressionParams::ScalarQuantization"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type55">
+    <name value="hctPruneTypesOptions"/>
+    <format value="7"/> <!-- record -->
+    <fields count="22">
+      <field name="pruneSceneData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneMeshData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneSkeletonData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneAnimationData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="customClasses" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="pruneAllSceneData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneEnvironmentData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneResourceData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneDestructionData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneAnimationTracks" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneAnnotations" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneIdentityBindingIndices" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneQuantizedBindings" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneAttributes" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneMeshUserChannels" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneAttachments" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneSelectionSets" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="selectionSets" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="selectionDeletionMode" typeid="type56" flags="32" /> <!-- hkEnum< hctPruneTypesOptions::selectionDeletionMode, hkInt8 > -->
+      <field name="pruneAllAnimationData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneMeshBindingData" typeid="type22" flags="32" /> <!-- hkBool -->
+      <field name="pruneRagdollAndMapperData" typeid="type22" flags="32" /> <!-- hkBool -->
+    </fields>
+  </type>
+  <type id="type56">
+    <name value="hkEnum"/>
+    <format value="8708"/> <!-- int8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type57" /> <!-- hctPruneTypesOptions::selectionDeletionMode -->
+      <typeparam id="type25" /> <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type25" flags="36" /> <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type57">
+    <name value="hctPruneTypesOptions::selectionDeletionMode"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <type id="type58">
+    <name value="hctPlatformWriterOptions"/>
+    <format value="7"/> <!-- record -->
+    <version value="1"/>
+    <fields count="4">
+      <field name="filename" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="format" typeid="type59" flags="32" /> <!-- hkEnum< hctPlatformWriterOptions::Format, hkInt8 > -->
+      <field name="target" typeid="type7" flags="32" /> <!-- hkStringPtr -->
+      <field name="saveEnvironmentData" typeid="type22" flags="32" /> <!-- hkBool -->
+    </fields>
+  </type>
+  <type id="type59">
+    <name value="hkEnum"/>
+    <format value="8708"/> <!-- int8 (LE) -->
+    <parameters count="2">
+      <typeparam id="type60" /> <!-- hctPlatformWriterOptions::Format -->
+      <typeparam id="type25" /> <!-- hkInt8 -->
+    </parameters>
+    <fields count="1">
+      <field name="storage" typeid="type25" flags="36" /> <!-- hkInt8 -->
+    </fields>
+  </type>
+  <type id="type60">
+    <name value="hctPlatformWriterOptions::Format"/>
+    <format value="33284"/> <!-- int32 (LE) -->
+  </type>
+  <object id="object1" typeid="type1" > <!-- hctFilterConfigurationSet -->
+    <record> <!-- hctFilterConfigurationSet -->
+      <field name="configurations">
+        <array count="1" elementtypeid="type4"> <!-- ArrayOf hctFilterConfigurationSet::Configuration -->
+          <record> <!-- hctFilterConfigurationSet::Configuration -->
+            <field name="configName"><string value="Animation"/></field>
+            <field name="filterStages">
+              <array count="7" elementtypeid="type11"> <!-- ArrayOf hctFilterConfigurationSet::FilterStage -->
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="1343280651"/></field>
+                  <field name="optionDataVersion"><integer value="65537"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type21"> <!-- ArrayOf hctAlignSceneToNodeOptions -->
+                      <record> <!-- hctAlignSceneToNodeOptions -->
+                        <field name="invert"><bool value="true"/></field>
+                        <field name="transformPositionX"><bool value="true"/></field>
+                        <field name="transformPositionY"><bool value="true"/></field>
+                        <field name="transformPositionZ"><bool value="true"/></field>
+                        <field name="transformRotation"><bool value="true"/></field>
+                        <field name="transformScale"><bool value="true"/></field>
+                        <field name="transformSkew"><bool value="true"/></field>
+                        <field name="keyframe"><integer value="0"/></field>
+                        <field name="nodeName">
+                          <array count="0" elementtypeid="type25"> <!-- ArrayOf hkInt8 -->
+                          </array>
+                        </field>
+                        <field name="nodeNameStr"><string value="ROOT_NODE"/></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="769831784"/></field>
+                  <field name="optionDataVersion"><integer value="66056"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type28"> <!-- ArrayOf hctCreateSkeletonOptions -->
+                      <record> <!-- hctCreateSkeletonOptions -->
+                        <field name="moveToOrigin"><bool value="false"/></field>
+                        <field name="automatic"><bool value="false"/></field>
+                        <field name="rigNodes"><string value="Master;L_Foot_Target2;L_Foot_Target1;L_Foot_Target;R_Foot_Target2;R_Foot_Target1;R_Foot_Target;RootPos;Pelvis;L_Hip;L_Thigh;L_Calf;L_Calf_Skirt;L_CalfTwist;L_CalfTwist1;L_Foot;L_Foot_Dummy1;L_Foot_Dummy2;L_FootTwist;L_Toe0;L_Knee;L_Knee_Skirt;L_Thigh_Skirt;L_ThighTwist;L_ThighTwist1;Pelvis_Dummy;L_Thigh_Root_Dummy;R_Thigh_Root_Dummy;Pelvis_Mantle;R_Hip;R_Thigh;R_Calf;R_Calf_Skirt;R_CalfTwist;R_CalfTwist1;R_Foot;R_Foot_Dummy1;R_Foot_Dummy2;R_FootTwist;R_Toe0;R_Knee;R_Knee_Skirt;R_Thigh_Skirt;R_ThighTwist;R_ThighTwist1;RootRotY;RootRotXZ;Spine;Spine1;Spine1_Mantle;Spine2;Collar;L_Axilla;L_Clavicle;L_Shoulder;L_ShoulderArmor;L_UpperArm;L_Elbow;L_Forearm;L_ForeArmTwist;L_ForeArmTwist1;L_Hand;L_Finger0;L_Finger01;L_Finger02;L_Finger1;L_Finger11;L_Finger12;L_Finger2;L_Finger21;L_Finger22;L_Finger3;L_Finger31;L_Finger32;L_Finger4;L_Finger41;L_Finger42;L_Hand_Dummy;L_Weapon;L_Shield;L_UpArmTwist;L_UpArmTwist1;L_Collar;L_Hand_Target;L_Pectoral;Neck;Head;Jaw;Lips_Lower;L_eyeA;L_eyeB;R_eyeA;R_eyeB;R_Axilla;R_Clavicle;R_Shoulder;R_ShoulderArmor;R_UpperArm;R_Elbow;R_Forearm;R_ForeArmTwist;R_ForeArmTwist1;R_Hand;R_Finger0;R_Finger01;R_Finger02;R_Finger1;R_Finger11;R_Finger12;R_Finger2;R_Finger21;R_Finger22;R_Finger3;R_Finger31;R_Finger32;R_Finger4;R_Finger41;R_Finger42;R_Hand_Dummy;R_Weapon;R_Shield;R_UpArmTwist;R_UpArmTwist1;R_Collar;R_Hand_Target;R_Pectoral;Spine2_Mantle;SpineArmor1;SpineArmor2;Spine_Mantle;Xtra_Multipurpose_Bone01_01;Xtra_Multipurpose_Bone01_02;Xtra_Multipurpose_Bone01_03;Xtra_Multipurpose_Bone01_04;Xtra_Multipurpose_Bone01_05;Xtra_Multipurpose_Bone01_06;Xtra_Multipurpose_Bone01_07;Xtra_Multipurpose_Bone01_08;Xtra_Multipurpose_Bone01_09;Xtra_Multipurpose_Bone01_10;Xtra_Multipurpose_Bone02_01;Xtra_Multipurpose_Bone02_02;Xtra_Multipurpose_Bone02_03;Xtra_Multipurpose_Bone02_04;Xtra_Multipurpose_Bone02_05;Xtra_Multipurpose_Bone02_06;Xtra_Multipurpose_Bone02_07;Xtra_Multipurpose_Bone02_08;Xtra_Multipurpose_Bone02_09;Xtra_Multipurpose_Bone02_10;"/></field>
+                        <field name="rigFile"><string/></field>
+                        <field name="selected"><bool value="true"/></field>
+                        <field name="skinBindings"><bool value="false"/></field>
+                        <field name="floatSlots"><string value=""/></field>
+                        <field name="useOrderInFile"><bool value="true"/></field>
+                        <field name="substringMatch"><bool value="false"/></field>
+                        <field name="skeletonName"><string value="Master"/></field>
+                        <field name="partitions"><string value=""/></field>
+                        <field name="partitionStartBoneNames"><string value=""/></field>
+                        <field name="partitionEndBoneNames"><string value=""/></field>
+                        <field name="useRootBoneNameAsSkeletonName"><bool value="false"/></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="769831785"/></field>
+                  <field name="optionDataVersion"><integer value="66054"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type29"> <!-- ArrayOf hctCreateAnimationsOptions -->
+                      <record> <!-- hctCreateAnimationsOptions -->
+                        <field name="playbackReferenceFrame"><integer value="0"/><!-- GLOBAL_REFERENCE_FRAME --></field>
+                        <field name="moveToOriginX"><bool value="true"/></field>
+                        <field name="moveToOriginY"><bool value="false"/></field>
+                        <field name="moveToOriginZ"><bool value="true"/></field>
+                        <field name="animationStartNodes"><string/></field>
+                        <field name="subAnimation"><bool value="false"/></field>
+                        <field name="subAnimationStartFrame"><integer value="0"/></field>
+                        <field name="subAnimationEndFrame"><integer value="99"/></field>
+                        <field name="selected"><bool value="false"/></field>
+                        <field name="manual"><bool value="false"/></field>
+                        <field name="rigFilename"><string/></field>
+                        <field name="partialAnimationNodes"><string value=""/></field>
+                        <field name="nameAnimationTracks"><bool value="false"/></field>
+                        <field name="previewColor"><integer value="4286545791"/></field>
+                        <field name="floatTracks"><string value=""/></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="355779994"/></field>
+                  <field name="optionDataVersion"><integer value="66048"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type32"> <!-- ArrayOf hctExtractMotionOptions -->
+                      <record> <!-- hctExtractMotionOptions -->
+                        <field name="allowUpDown"><bool value="false"/></field>
+                        <field name="allowFrontBack"><bool value="true"/></field>
+                        <field name="allowRightLeft"><bool value="true"/></field>
+                        <field name="allowTurning"><bool value="false"/></field>
+                        <field name="ignoreUpDown"><bool value="false"/></field>
+                        <field name="ignoreFrontBack"><bool value="false"/></field>
+                        <field name="ignoreRightLeft"><bool value="false"/></field>
+                        <field name="customNumSamples"><bool value="false"/></field>
+                        <field name="numSamples"><integer value="-1"/></field>
+                        <field name="upAxis"><integer value="1"/><!-- AXIS_Y --></field>
+                        <field name="forwardAxis"><integer value="2"/><!-- AXIS_Z --></field>
+                        <field name="alternateReferenceFrame"><string/></field>
+                        <field name="useFrameRange"><bool value="false"/></field>
+                        <field name="startFrame"><integer value="0"/></field>
+                        <field name="endFrame"><integer value="0"/></field>
+                        <field name="type"><integer value="0"/><!-- MET_DEFAULT --></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="1727380080"/></field>
+                  <field name="optionDataVersion"><integer value="65794"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type39"> <!-- ArrayOf hctSplineCompressionOptionsSerializable -->
+                      <record> <!-- hctSplineCompressionOptionsSerializable -->
+                        <field name="trackParams">
+                          <array count="2" elementtypeid="type43"> <!-- ArrayOf hkaSplineCompressedAnimation::TrackCompressionParams -->
+                            <record> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+                              <field name="rotationTolerance"><real dec="1e-05" hex="#3ee4f8b580000000"/></field>
+                              <field name="translationTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="scaleTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="floatingTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="rotationDegree"><integer value="3"/></field>
+                              <field name="translationDegree"><integer value="3"/></field>
+                              <field name="scaleDegree"><integer value="3"/></field>
+                              <field name="floatingDegree"><integer value="3"/></field>
+                              <field name="rotationQuantizationType"><integer value="1"/><!-- THREECOMP40 --></field>
+                              <field name="translationQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                              <field name="scaleQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                              <field name="floatQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                            </record>
+                            <record> <!-- hkaSplineCompressedAnimation::TrackCompressionParams -->
+                              <field name="rotationTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="translationTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="scaleTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="floatingTolerance"><real dec="0.001" hex="#3f50624de0000000"/></field>
+                              <field name="rotationDegree"><integer value="3"/></field>
+                              <field name="translationDegree"><integer value="3"/></field>
+                              <field name="scaleDegree"><integer value="3"/></field>
+                              <field name="floatingDegree"><integer value="3"/></field>
+                              <field name="rotationQuantizationType"><integer value="1"/><!-- THREECOMP40 --></field>
+                              <field name="translationQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                              <field name="scaleQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                              <field name="floatQuantizationType"><integer value="1"/><!-- BITS16 --></field>
+                            </record>
+                          </array>
+                        </field>
+                        <field name="animationParams">
+                          <record> <!-- hkaSplineCompressedAnimation::AnimationCompressionParams -->
+                            <field name="maxFramesPerBlock"><integer value="256"/></field>
+                            <field name="enableSampleSingleTracks"><bool value="false"/></field>
+                          </record>
+                        </field>
+                        <field name="useExpertControls"><bool value="false"/></field>
+                        <field name="selectedSet"><integer value="0"/></field>
+                        <field name="setNames"><string value="Default;"/></field>
+                        <field name="boneSets"><string value="^"/></field>
+                        <field name="allBoneNames"><string value="Master;L_Foot_Target2;L_Foot_Target1;L_Foot_Target;R_Foot_Target2;R_Foot_Target1;R_Foot_Target;RootPos;Pelvis;L_Hip;L_Thigh;L_Calf;L_Calf_Skirt;L_CalfTwist;L_CalfTwist1;L_Foot;L_FootTwist;L_Toe0;L_Knee;L_Knee_Skirt;L_Thigh_Skirt;L_ThighTwist;L_ThighTwist1;L_Wepon_Case;R_Hip;R_Thigh;R_Calf;R_Calf_Skirt;R_CalfTwist;R_CalfTwist1;R_Foot;R_FootTwist;R_Toe0;R_Knee;R_Knee_Skirt;R_Thigh_Skirt;R_ThighTwist;R_ThighTwist1;R_Wepon_Case;RootRotY;RootRotXZ;Spine;Spine1;Spine2;B_Wepon_Case;B_Wepon_Case0_L;B_Wepon_Case0_R;Collar;L_Clavicle;L_Shoulder;L_UpperArm;L_Elbow;L_Forearm;L_ForeArmTwist;L_ForeArmTwist1;L_Hand;L_Finger0;L_Finger01;L_Finger02;L_Finger1;L_Finger11;L_Finger12;L_Finger2;L_Finger21;L_Finger22;L_Finger3;L_Finger31;L_Finger32;L_Finger4;L_Finger41;L_Finger42;L_Shield;L_Weapon;L_UpArmTwist;L_UpArmTwist1;L_Pectoral;L_Po;Neck;Head;R_Clavicle;R_Shoulder;R_UpperArm;R_Elbow;R_Forearm;R_ForeArmTwist;R_ForeArmTwist1;R_Hand;R_Finger0;R_Finger01;R_Finger02;R_Finger1;R_Finger11;R_Finger12;R_Finger2;R_Finger21;R_Finger22;R_Finger3;R_Finger31;R_Finger32;R_Finger4;R_Finger41;R_Finger42;R_Shield;R_Weapon;R_UpArmTwist;R_UpArmTwist1;R_Pectoral;R_Po;SpineArmor1;SpineArmor2;"/></field>
+                        <field name="boneDepth">
+                          <array count="110" elementtypeid="type46"> <!-- ArrayOf hkUint8 -->
+                            <integer value="0"/>
+                            <integer value="1"/>
+                            <integer value="2"/>
+                            <integer value="3"/>
+                            <integer value="1"/>
+                            <integer value="2"/>
+                            <integer value="3"/>
+                            <integer value="1"/>
+                            <integer value="2"/>
+                            <integer value="3"/>
+                            <integer value="3"/>
+                            <integer value="4"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="6"/>
+                            <integer value="6"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="3"/>
+                            <integer value="3"/>
+                            <integer value="3"/>
+                            <integer value="4"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="5"/>
+                            <integer value="6"/>
+                            <integer value="6"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="4"/>
+                            <integer value="3"/>
+                            <integer value="2"/>
+                            <integer value="3"/>
+                            <integer value="4"/>
+                            <integer value="5"/>
+                            <integer value="6"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="8"/>
+                            <integer value="8"/>
+                            <integer value="9"/>
+                            <integer value="9"/>
+                            <integer value="10"/>
+                            <integer value="10"/>
+                            <integer value="10"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="11"/>
+                            <integer value="9"/>
+                            <integer value="9"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="8"/>
+                            <integer value="7"/>
+                            <integer value="8"/>
+                            <integer value="8"/>
+                            <integer value="9"/>
+                            <integer value="9"/>
+                            <integer value="10"/>
+                            <integer value="10"/>
+                            <integer value="10"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="12"/>
+                            <integer value="13"/>
+                            <integer value="11"/>
+                            <integer value="11"/>
+                            <integer value="9"/>
+                            <integer value="9"/>
+                            <integer value="7"/>
+                            <integer value="7"/>
+                            <integer value="6"/>
+                            <integer value="6"/>
+                          </array>
+                        </field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="2496164476"/></field>
+                  <field name="optionDataVersion"><integer value="66048"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type55"> <!-- ArrayOf hctPruneTypesOptions -->
+                      <record> <!-- hctPruneTypesOptions -->
+                        <field name="pruneSceneData"><bool value="true"/></field>
+                        <field name="pruneMeshData"><bool value="true"/></field>
+                        <field name="pruneSkeletonData"><bool value="true"/></field>
+                        <field name="pruneAnimationData"><bool value="false"/></field>
+                        <field name="customClasses"><string value=""/></field>
+                        <field name="pruneAllSceneData"><bool value="true"/></field>
+                        <field name="pruneEnvironmentData"><bool value="true"/></field>
+                        <field name="pruneResourceData"><bool value="false"/></field>
+                        <field name="pruneDestructionData"><bool value="false"/></field>
+                        <field name="pruneAnimationTracks"><bool value="false"/></field>
+                        <field name="pruneAnnotations"><bool value="true"/></field>
+                        <field name="pruneIdentityBindingIndices"><bool value="false"/></field>
+                        <field name="pruneQuantizedBindings"><bool value="true"/></field>
+                        <field name="pruneAttributes"><bool value="false"/></field>
+                        <field name="pruneMeshUserChannels"><bool value="false"/></field>
+                        <field name="pruneAttachments"><bool value="true"/></field>
+                        <field name="pruneSelectionSets"><bool value="false"/></field>
+                        <field name="selectionSets"><string value=""/></field>
+                        <field name="selectionDeletionMode"><integer value="1"/><!-- HK_SELECTION_DELETE_SELECTED --></field>
+                        <field name="pruneAllAnimationData"><bool value="false"/></field>
+                        <field name="pruneMeshBindingData"><bool value="true"/></field>
+                        <field name="pruneRagdollAndMapperData"><bool value="false"/></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+                <record> <!-- hctFilterConfigurationSet::FilterStage -->
+                  <field name="filterId"><integer value="2876798309"/></field>
+                  <field name="optionDataVersion"><integer value="66048"/></field>
+                  <field name="options">
+                    <array count="1" elementtypeid="type58"> <!-- ArrayOf hctPlatformWriterOptions -->
+                      <record> <!-- hctPlatformWriterOptions -->
+                        <field name="filename"><string value="D:\mod file\fix\a770_040000.hkx"/></field>
+                        <field name="format"><integer value="1"/><!-- FORMAT_NATIVE --></field>
+                        <field name="target"><string value="64m"/></field>
+                        <field name="saveEnvironmentData"><bool value="false"/></field>
+                      </record>
+                    </array>
+                  </field>
+                </record>
+              </array>
+            </field>
+          </record>
+        </array>
+      </field>
+      <field name="currentIndex"><integer value="0"/></field>
+    </record>
+  </object>
+</hktagfile>
